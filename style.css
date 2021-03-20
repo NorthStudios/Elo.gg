@@ -67,7 +67,7 @@ color:darkslateblue;
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: darkslateblue;
+  background-color: #333;
 }
 
 /* Show the dropdown menu on hover */
