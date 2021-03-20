@@ -1,132 +1,68 @@
-  
-/* B2 Dark Purple Theme for "Material for MkDocs" by Blake Buthod, United States
-/* Material for MkDocs - https://github.com/squidfunk/mkdocs-material#material-for-mkdocs
-/* Version: 2019.06.11.01
-*/
-html,
-body,
-main
-.md-container,
-.md-main,
-blockquote
-{
-    background-color: #222 !important;
-    color: #fdfdfd !important;
-    
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
 }
-tbody {
-    background-color: #333 !important; 
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-.md-typeset table:not([class]) td {
-    border-top: .05rem solid #444;
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
 }
-.md-typeset blockquote {
-    border-left: .2rem solid #898989;
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
 }
-.md-typeset table:not([class]) tr:hover {
-    background-color: #444;
-    box-shadow: inset 0 0.05rem 0 #888;
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
 }
-@media only screen and (min-width: 76.25em) {
-    [data-md-color-primary=indigo] .md-tabs {
-        background-color: #555ba4 !important;
-    }
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
-header {
-    background-color: #40447b !important;
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
-.md-content a {
-    color: #7f87f2 !important;
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
-.md-content a:hover {
-    color: #555ba4 !important;
-}
-.md-nav__link--active {
-    color: #7f87f2 !important;
-}
-[data-md-color-accent=green] .md-nav__link:focus, [data-md-color-accent=green] .md-nav__link:hover, [data-md-color-accent=green] .md-typeset .footnote li:hover .footnote-backref:hover, [data-md-color-accent=green] .md-typeset .footnote li:target .footnote-backref, [data-md-color-accent=green] .md-typeset .md-clipboard:active:before, [data-md-color-accent=green] .md-typeset .md-clipboard:hover:before, [data-md-color-accent=green] .md-typeset [id] .headerlink:focus, [data-md-color-accent=green] .md-typeset [id]:hover .headerlink:hover, [data-md-color-accent=green] .md-typeset [id]:target .headerlink,
-.md-typeset h1
-{
-    color: #999;
-}
-.md-typeset .codehilitetable .linenos, .md-typeset .highlighttable .linenos {
-    background-color: #313131;
-    color: #fff;
-}
-.codehilite pre {
-    background-color: #373737 !important;
-    color: white !important;
-}
-.md-typeset code {
-    background-color: #373737 !important;
-    color: #eee;
-}
-.md-typeset code {
-    box-shadow: 0.29412em 0 0 #373737, -0.29412em 0 0 #373737 !important;
-}
-.md-nav__link[data-md-state=blur] {
-    color: #999 !important;
-}
-@media only screen and (min-width: 60em) {
-    [data-md-toggle=search]:checked~.md-header .md-search__input {
-        background-color: #222;
-        color: white !important;
-    }
-}
-.codehilite .nt, .md-typeset .highlight .nt,
-.codehilite .k, .md-typeset .highlight .k
-{
-    color: #d9d790;
-}
-.codehilite .nv, .codehilite .vc, .codehilite .vg, .codehilite .vi, .md-typeset .highlight .nv, .md-typeset .highlight .vc, .md-typeset .highlight .vg, .md-typeset .highlight .vi {
-    color: #f9bb76;
-}
-.codehilite .s, .codehilite .sb, .codehilite .sc, .md-typeset .highlight .s, .md-typeset .highlight .sb, .md-typeset .highlight .sc,
-.codehilite .s2, .md-typeset .highlight .s2
-{
-    color: #99d9ad;
-}
-.codehilite .il, .codehilite .m, .codehilite .mf, .codehilite .mh, .codehilite .mi, .codehilite .mo, .md-typeset .highlight .il, .md-typeset .highlight .m, .md-typeset .highlight .mf, .md-typeset .highlight .mh, .md-typeset .highlight .mi, .md-typeset .highlight .mo,
-.codehilite .na, .codehilite .nb, .md-typeset .highlight .na, .md-typeset .highlight .nb
-{
-    color: #df9d97;
-}
-.codehilite .nx, .md-typeset .highlight .nx {
-    color: #ecb7c9;
-}
-.codehilite .kd, .codehilite .kn, .md-typeset .highlight .kd, .md-typeset .highlight .kn {
-    color: #b3c6e8;
-}
-.codehilite .hll, .md-typeset .highlight .hll {
-    background-color: rgba(72, 76, 119, .5);
-}
-a > code{
-    color: #555ba4;
-}
-.codehilite .kr, .codehilite .kt, .md-typeset .highlight .kr, .md-typeset .highlight .kt {
-    color: #a9c2f0;
-}
-.codehilite .ne, .codehilite .nf, .md-typeset .highlight .ne, .md-typeset .highlight .nf {
-    color: #f4d3e0;
-}
-.codehilite .nc, .md-typeset .highlight .nc {
-    color: #f09bbc;
-}
-.codehilite .nn, .md-typeset .highlight .nn {
-    color: #f775a1;
-}
-.codehilite .bp, .md-typeset .highlight .bp {
-    color: #83abf4;
-}
-.codehilite .no, .md-typeset .highlight .no {
-    color: #94b6f4;
-}
-.codehilite .s1, .codehilite .ss, .md-typeset .highlight .s1, .md-typeset .highlight .ss {
-    color: #58e19d;
-}
-.codehilite .gd, .md-typeset .highlight .gd {
-    background-color: #db8a8a;
-}
-.codehilite .gi, .md-typeset .highlight .gi {
-    background-color: #a1c4a1;
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
