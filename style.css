@@ -6,7 +6,7 @@
 }
 
 /* Links inside the navbar */
-.navbar a, .active .navbar a:link {
+.navbar a, .navbar a:link {
   float: left;
   font-size: 16px;
   color: white;
@@ -15,7 +15,9 @@
   text-decoration: none;
   font-family: theboldfont;
 }
-
+.active {
+background-color:darkslatelue;
+}
 
 /* The dropdown container */
 .dropdown {
