@@ -1,6 +1,6 @@
 .navbar {
   overflow: hidden;
-  height: 150px;
+  height: 70px;
   background-color: #333;
   font-family: Arial;
   font-family: theboldfont;
@@ -9,7 +9,7 @@
 /* Links inside the navbar */
 .navbar a, .navbar a:link {
   float: left;
-  font-size: 16px;
+  font-size: 26px;
   color: white;
   text-align: center;
   padding: 14px 16px;
