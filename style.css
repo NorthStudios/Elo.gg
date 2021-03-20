@@ -6,7 +6,7 @@
 }
 
 /* Links inside the navbar */
-.navbar a, .navbar a:link {
+.navbar a, .active .navbar a:link {
   float: left;
   font-size: 16px;
   color: white;
@@ -36,7 +36,7 @@
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .navbar a:active, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .dropbtn {
   background-color: darkslateblue;
  
   
