@@ -15,8 +15,9 @@
   text-decoration: none;
   font-family: theboldfont;
 }
-.active {
-background-color:darkslatelue;
+.active, .btn:active {
+background-color:darkslateblue;
+color:darkslateblue;
 }
 
 /* The dropdown container */
