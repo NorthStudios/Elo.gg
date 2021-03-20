@@ -6,7 +6,7 @@
 }
 
 /* Links inside the navbar */
-.navbar a, navbar a:link {
+.navbar a, .navbar a:link {
   color:darkslateblue;
   float: left;
   font-size: 16px;
