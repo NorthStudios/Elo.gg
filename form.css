@@ -29,7 +29,8 @@ section {
   width: 100%;
   margin-top: 20px;
   font-size: 20px;
-  background-color: #282828;
+  color: white;
+  
 }
 .form-group input,
 .form-group textarea {
@@ -38,6 +39,7 @@ section {
   font-size: 18px;
   border: 1px solid rgba(128, 128, 128, 0.199);
   margin-top: 5px;
+  background-color: #282828;
 }
 
 textarea {
