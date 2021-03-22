@@ -198,13 +198,20 @@
         <form action="mailto:northstudiosdev@gmail.com"
         method="POST"
         enctype="multipart/form-data"
-        name="EmailForm">
+        name="EmailTestForm">
         Name:<br>
-        <input type="text" size="19" name="ContactName"><br><br>
-        Message:<br> <textarea name="ContactCommentt" rows="6" cols="20">
+        <input type="text" size="19" name="VisitorName"><br><br>
+        Message:<br> <textarea name="VisitorComment" rows="6" cols="20">
         </textarea><br><br> <input type="submit" value="Submit"> </form>
         
+      
         <script>
+            var frmvalidator = new Validator("contactform"); 
+            frmvalidator.addValidation("name","req","Please provide your name"); 
+            frmvalidator.addValidation("email","req","Please provide your email"); 
+            frmvalidator.addValidation("email","email", "Please enter a valid email address");
+            
+            
             var slideIndex = 0;
             carousel();
             function carousel() {
@@ -217,10 +224,72 @@
                 if (slideIndex > x.length) {slideIndex = 1}
                 x[slideIndex-1].style.display = "block";
                 setTimeout(carousel, 2500); // Change image every 2.5 seconds
+                }
+                </script>
                 
+                <?php
+
+                $errors = ";
+
+                $myemail = 'northstudiosdev@gmail.com';//<—–Put Your email address here. if(empty($_POST[‘name’]) ||
+
+                empty($_POST['email']) ||
+
+                empty($_POST['message']))
+
+                    {
+
+                $errors .= "\n Error: all fields are required";
 
 }
-        </script>
+
+                $name = $_POST['name'];
+
+                $email_address = $_POST['email'];
+
+                $message = $_POST['message'];
+
+                if (!preg_match(
+
+                "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email_address))
+
+{
+
+                $errors .= "\n Error: Invalid email address";
+
+}
+
+                if( empty($errors))
+
+{
+
+                $to = $myemail;
+
+                $email_subject = "Contact form submission: $name";
+
+                $email_body = "You have received a new message. ".
+
+                " Here are the details:\n Name: $name \n ".
+
+                "Email: $email_address\n Message \n $message";
+
+                $headers = "From: $myemail\n";
+
+                $headers .= "Reply-To: $email_address";
+
+                mail($to,$email_subject,$email_body,$headers);
+
+//redirect to the ‘thank you’ page
+
+                header('Location: contact-form-thank-you.html');
+
+}
+
+?>
+                
+
+
+      
         
         <footer>Copyright © North Studios. All rights reserved.<br>ELO.GG isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.</footer>
 
