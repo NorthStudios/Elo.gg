@@ -40,6 +40,7 @@ section {
   border: 1px solid rgba(128, 128, 128, 0.199);
   margin-top: 5px;
   background-color: #282828;
+  color: white;
 }
 
 textarea {
@@ -58,6 +59,8 @@ button[type="submit"] {
   cursor: pointer;
   margin-top: 10px;
   transition: 0.3s ease background-color;
+  bakcground-color: #282828;
+  color: white;
 }
 button[type="submit"]:hover {
   background-color: rgb(214, 226, 236);
