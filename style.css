@@ -7,9 +7,7 @@
   font-style: normal;
 }
 
-html{
-  font-size:60%;
-}
+
 
 .navbar {
   overflow: hidden;
@@ -112,6 +110,7 @@ color:darkslateblue;
   transform: scale(0) rotate(-180deg);
   transition: transform .5s;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  font-size: 60%;
 }
 
 .change .navbarr {
