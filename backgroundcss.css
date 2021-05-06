@@ -1,12 +1,4 @@
-body,html{
-        width:100%;
-        height: 100%;
-      }
-      body{
-        margin:0;
-        padding:0;
-        background:#282828;
-      }
+
       .bubbles{
         position:absolute;
         width:100%;
